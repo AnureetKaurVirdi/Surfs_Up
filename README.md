@@ -23,7 +23,7 @@ session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measur
 
 session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12).all()
 
-#### o The amount of precipitation at the most active station for June and December:
+### o The amount of precipitation at the most active station for June and December:
 
 session.query(Measurement.prcp).filter(Measurement.station == 'USC00519281').filter(extract('month', Measurement.date) == 6).all()
 
